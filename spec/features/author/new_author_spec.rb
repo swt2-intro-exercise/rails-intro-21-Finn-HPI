@@ -5,4 +5,10 @@ describe "New author page", type: :feature do
     # https://guides.rubyonrails.org/routing.html#path-and-url-helpers
     visit new_author_path
   end
+  it "should have text input fields for the author's first name, last name and home page" do
+    visit new_author_path
+    expect(page).to have_field 'author[first_name]'
+    expect(page).to have_field 'author[last_name]'
+    expect(page).to have_field 'author[homepage]'
+  end
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "All authors page", type: :feature do
+describe "All authors pages", type: :feature do
     it "should have table with schema 'Name', 'HomePage'" do
         visit authors_path
         expect(page).to have_xpath '//table/tr'

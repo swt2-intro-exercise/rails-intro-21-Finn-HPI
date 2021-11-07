@@ -17,4 +17,8 @@ describe "Paper Model", type: :model do
       paper = Paper.new(title: 'Paper 1', venue: '100', year: 'hallo')
       expect(paper).to_not be_valid
     end
+    it "should have an empty list of authors" do
+      paper = Paper.new(title: 'Paper 1', venue: '', year: 2021)
+      expect(paper.authors).to be_empty
+    end
 end
